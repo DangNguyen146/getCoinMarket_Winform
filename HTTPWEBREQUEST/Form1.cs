@@ -46,7 +46,8 @@ namespace HTTPWEBREQUEST
         }
         private void addHTML()
         {
-            
+            tb_bitcoin.Text = tb_eere.Text = tb_tt.Text= richTextBox1.Text = "Wait for loading";
+
             string data = getHTML();
             richTextBox1.Text = data;
 
@@ -80,7 +81,12 @@ namespace HTTPWEBREQUEST
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addHTML();
+            Thread resfreshButton = new Thread(() =>
+             {
+                 addHTML();
+             });
+            resfreshButton.IsBackground = true;
+            resfreshButton.Start();
         }
     }
 }

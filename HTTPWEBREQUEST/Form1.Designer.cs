@@ -160,7 +160,7 @@
             this.Controls.Add(this.lb_ethereum);
             this.Controls.Add(this.lb_bitcoin);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Get coin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
